@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-header text-right">
+    <%= @memo.created_at %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= @memo.title %></h5>
+    <p class="card-text"><%= @memo.content %></p>
+    <%= link_to fa_icon("pencil", text: "수정하기"), edit_memo_path(@memo), class: "btn btn-warning text-white" %>
+    <%= link_to fa_icon("trash", text: "삭제하기"), memo_path(@memo), method: :delete,class: "btn btn-danger" %>
+    
+  </div>
+  <div class="card-footer text-muted text-right">
+    나는 아무것이다
+  </div>
+</div>
