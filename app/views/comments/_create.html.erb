@@ -1,0 +1,13 @@
+<div class="row">
+    <%= form_for([@memo,@comment], html: { class: "w-100 mx-3"}) do |c| %>
+        <%= c.hidden_field :memo_id, value: @memo.id %>
+        <%= c.label :content %>
+        <div class="form-group cal-10">
+           
+            <%= c.text_field :content, class: "form-control" %>
+        </div>
+        <div class="form-group cal-2">
+            <%= button_to "댓글", memo_comments_path(@memo,@comment), method: :post, class: "btn btn-primary" %>
+        </div>
+    <% end %>
+</div>

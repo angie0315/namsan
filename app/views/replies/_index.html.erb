@@ -1,0 +1,12 @@
+<% @replies.each do |c| %>
+    <div class="row alert alert-primary">
+        <p class="col-10 text-left">
+            <%= c.content %>
+        </p>
+        <% if current_user.id == c.user.id %>
+            <span class="col-2">
+                <%= button_to "삭제", card_reply_path(@card,c),method: :delete,class: "btn btn-danger",data: {confirm: "정말 삭제하겠습니까?"} %>
+            </span>
+        <% end %>
+    </div>
+<% end %>

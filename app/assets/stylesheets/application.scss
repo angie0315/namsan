@@ -15,3 +15,68 @@
  */
 @import "bootstrap";
 @import "font-awesome";
+
+//color management
+.text-muted{ 
+    color: #8492a7 !important;
+}
+.text-info{ 
+    color: #00b5ff !important;
+}
+.text-success{ 
+    color: #00d061 !important;
+}
+.text-primary{ 
+    color: #7e55f3 !important;
+}
+.text-warning{ 
+    color: #ffd654 !important;
+}
+.text-danger{ 
+    color: #ff4743 !important;
+}
+//background-color
+.bg-muted{ 
+    background-color: #8492a7 !important;
+}
+.bg-info{ 
+    background-color: #00b5ff !important;
+}
+.bg-success{ 
+    background-color: #00d061 !important;
+}
+.bg-primary{ 
+    background-color: #7e55f3 !important;
+}
+.bg-warning{ 
+    background-color: #ffd654 !important;
+}
+.bg-danger{ 
+    background-color: #ff4743 !important;
+}
+
+//btn-color
+.btn-muted{ 
+    border-color: #8492a7 !important;
+    background-color: rgba(#8492a7,0.5) !important;
+}
+.btn-info{ 
+    border-color: #00b5ff !important;
+    background-color: rgba(#00b5ff,0.5) !important;
+}
+.btn-success{ 
+    border-color: #00d061!important;
+    background-color: rgba(#00d061,0.5) !important;
+}
+.btn-primary{ 
+    border-color: #7e55f3 !important;
+    background-color: rgba(#7e55f3,0.5) !important;
+}
+.btn-warning{ 
+    border-color: #ffd654 !important;
+    background-color: rgba(#ffd654,0.5) !important;
+}
+.btn-danger{ 
+    border-color: #ff4743 !important;
+    background-color: rgba(#ff4743,0.5) !important;
+}

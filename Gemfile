@@ -8,6 +8,15 @@ end
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem "font-awesome-rails"
+gem "devise"
+gem 'kaminari'
+gem 'tinymce-rails'
+gem 'bootstrap4-kaminari-views'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog-aws'
+gem 'figaro'
+gem 'devise-i18n'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
