@@ -6,8 +6,8 @@
     <div class="card-body">
       <h5 class="card-title"><%= @memo.title %></h5>
       <p class="card-text"><%= @memo.content.html_safe %></p>
-      <%= link_to fa_icon("pencil", text: "수정하기"), edit_memo_path(@memo), class: "btn btn-warning text-white" %>
-      <%= link_to fa_icon("trash", text: "삭제하기"), memo_path(@memo), method: :delete,class: "btn btn-danger", data: {confirm: "정말 삭제하겠습니까?"} %>
+      <%#= link_to fa_icon("pencil", text: "수정하기"), edit_memo_path(@memo), class: "btn btn-warning text-white" %>
+      <%#= link_to fa_icon("trash", text: "삭제하기"), memo_path(@memo), method: :delete,class: "btn btn-danger", data: {confirm: "정말 삭제하겠습니까?"} %>
       
     </div>
     <div class="card-footer text-muted text-right">
