@@ -7,5 +7,5 @@ CarrierWave.configure do |config|
     aws_secret_access_key: "#{ENV['AWS_SECRET_KEY']}",                        # required
     region:                'ap-northeast-2',                  # optional, defaults to 'us-east-1'
     }
-  config.fog_directory  = 'namsan-development'                                   # required
+  config.fog_directory  = 'namsan-production'                                   # required
 end

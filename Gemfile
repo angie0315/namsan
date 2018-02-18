@@ -17,6 +17,7 @@ gem 'mini_magick'
 gem 'fog-aws'
 gem 'figaro'
 gem 'devise-i18n'
+gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
