@@ -19,7 +19,7 @@
                   <%= image_tag c.image.thumb, class: "card-img-top"  %>
                   <div class="card-body">
                     <h5 class="card-title"><%= c.title.first(15) %></h5>
-                    <p class="card-text"><%= c.content.first(40).html_safe %></p>
+                    <h5 class="text-muted">@<%= c.user.name %></h5>
                     <%= link_to "Show", card_path(c), class: "btn btn-primary" %>
                   </div>
                 </div>
