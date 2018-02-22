@@ -4,7 +4,7 @@
       <%= @card.created_at %>
     </div>
     <div class="card-body">
-      <h5 class="card-title"><%= @card.title %></h5>
+      <h1 class="card-title text-center"><%= @card.title %></h1>
       <%= image_tag @card.image, class: "w-100" %>
       <p class="card-text"><%= @card.content.html_safe %></p>
       <% if current_user.id == @card.user.id %>
