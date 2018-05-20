@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-
-
+  resources :trades do
+    resources :replies, only: [:create, :destroy]
+    collection do
+      get 'clothes'
+      get 'books'
+      get 'rests'
+    end
+  end
   devise_for :users
   root 'home#index'
-  resources :memos do
-    resources :comments, only: [:create, :destroy]
-  end
   resources :cards do
     resources :replies, only: [:create, :destroy]
   end

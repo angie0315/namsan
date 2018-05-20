@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <div class="row">
+        <% @clothes.each do |c| %>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card my-2" >
+                  <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+                  <%#= image_tag c.image.thumb, class: "card-img-top"  %>
+                  <div class="card-body">
+                    <h5 class="card-title"><%= c.title.first(15) %></h5>
+                    <h5 class="text-muted">@<%= c.kakaoid %></h5>
+                    <%= link_to "Show", trade_path(c), class: "btn btn-primary" %>
+                  </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <%= paginate @clothes, theme: 'twitter-bootstrap-4'%>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MemoTest < ActiveSupport::TestCase
+class TradeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

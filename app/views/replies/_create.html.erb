@@ -1,14 +1,14 @@
 <div class="row">
-    <%= form_for([@card,@reply], html: { class: "w-100 mx-3"}) do |c| %>
+    <%= form_for([@trade,@reply], html: { class: "w-100 mx-3"}) do |c| %>
         <%= c.hidden_field :user_id, value: current_user.id %>
-        <%= c.hidden_field :card_id, value: @card.id %>
+        <%= c.hidden_field :trade_id, value: @trade.id %>
         <%= c.label :content %>
         <div class="form-group cal-10">
            
             <%= c.text_field :content, class: "form-control" %>
         </div>
         <div class="form-group cal-2">
-            <%= button_to "댓글", card_replies_path(@card,@reply), method: :post, class: "btn btn-primary" %>
+            <%= button_to "댓글", trade_replies_path(@trade,@reply), method: :post, class: "btn btn-primary" %>
         </div>
     <% end %>
 </div>

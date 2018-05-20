@@ -3,7 +3,15 @@
 one:
   title: MyString
   content: MyText
+  kakaoid: MyString
+  user: one
+  variety: MyString
+  image: MyString
 
 two:
   title: MyString
   content: MyText
+  kakaoid: MyString
+  user: two
+  variety: MyString
+  image: MyString

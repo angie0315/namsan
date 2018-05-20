@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180128052202) do
+ActiveRecord::Schema.define(version: 20180517024806) do
 
   create_table "cards", force: :cascade do |t|
     t.string "title"
@@ -22,28 +22,26 @@ ActiveRecord::Schema.define(version: 20180128052202) do
     t.index ["user_id"], name: "index_cards_on_user_id"
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.text "content"
-    t.integer "memo_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "memos", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "replies", force: :cascade do |t|
     t.text "content"
     t.integer "user_id"
-    t.integer "card_id"
+    t.integer "trade_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["card_id"], name: "index_replies_on_card_id"
+    t.index ["trade_id"], name: "index_replies_on_trade_id"
     t.index ["user_id"], name: "index_replies_on_user_id"
+  end
+
+  create_table "trades", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.string "kakaoid"
+    t.integer "user_id"
+    t.string "variety"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_trades_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

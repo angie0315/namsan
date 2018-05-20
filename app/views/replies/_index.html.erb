@@ -1,11 +1,11 @@
 <% @replies.each do |c| %>
-    <div class="row alert alert-primary">
-        <p class="col-10 text-left">
+    <div class="row align-items-center mb-2">
+        <p class="col-10 pl-3 text-left text-dark">
             <%= c.content %>
         </p>
         <% if current_user.id == c.user.id %>
             <span class="col-2">
-                <%= button_to "삭제", card_reply_path(@card,c),method: :delete,class: "btn btn-danger",data: {confirm: "정말 삭제하겠습니까?"} %>
+                <%= button_to "삭제", trade_reply_path(@trade,c),method: :delete,class: "btn btn-danger",data: {confirm: "정말 삭제하겠습니까?"} %>
             </span>
         <% end %>
     </div>

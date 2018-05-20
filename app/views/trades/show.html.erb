@@ -1,0 +1,20 @@
+<%# TODO: show 액션 만들기%>
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h1 class="card-title text-center"><%= @trade.title %></h1>
+      <h4 class="text-muted text-right">연락할 카카오 Id : @<%= @trade.kakaoid %></h4>
+      <h6 class="text-muted text-right"><%= @trade.created_at%></h6>
+      <%#= image_tag @trade.image, class: "w-100" %>
+      <p class="card-text"><%= @trade.content.html_safe %></p>
+      <% if current_user.id == @trade.user.id %>
+        <%= link_to fa_icon("pencil", text: "수정하기"), edit_trade_path(@trade), class: "btn btn-warning text-white" %>
+        <%= link_to fa_icon("trash", text: "삭제하기"), trade_path(@trade), method: :delete,class: "btn btn-danger", data: {confirm: "정말 삭제하겠습니까?"} %>
+      <% end %>
+    </div>
+    <div class="card-footer text-muted text-right bg-white">
+      <%= render 'replies/create' %>
+      <%= render 'replies/index' %>
+    </div>
+  </div>
+</div>

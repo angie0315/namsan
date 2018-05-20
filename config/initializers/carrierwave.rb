@@ -9,3 +9,4 @@ CarrierWave.configure do |config|
     }
   config.fog_directory  = 'namsan-production'                                   # required
 end
+# TODO: aws s3와 연결
