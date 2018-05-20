@@ -5,7 +5,7 @@
       <h1 class="card-title text-center"><%= @trade.title %></h1>
       <h4 class="text-muted text-right">연락할 카카오 Id : @<%= @trade.kakaoid %></h4>
       <h6 class="text-muted text-right"><%= @trade.created_at%></h6>
-      <%#= image_tag @trade.image, class: "w-100" %>
+      <%= image_tag @trade.image, class: "w-100" %>
       <p class="card-text"><%= @trade.content.html_safe %></p>
       <% if current_user.id == @trade.user.id %>
         <%= link_to fa_icon("pencil", text: "수정하기"), edit_trade_path(@trade), class: "btn btn-warning text-white" %>
